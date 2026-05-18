@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { DonutChart } from "@tremor/react";
+import { MiniDonut } from "@/components/MiniDonut";
 import { ArrowUpRight, GitBranch, GitCommit, Clock, ExternalLink } from "lucide-react";
 import { formatDistanceToNow, parseISO } from "date-fns";
 import { cn } from "@/lib/utils";
@@ -80,23 +80,15 @@ export function SuiteCard({ suite, index }: SuiteCardProps) {
           <ArrowUpRight className="h-4 w-4 text-slate-500 group-hover:text-white transition-colors" />
         </div>
 
-        <div className="mt-5 grid grid-cols-[7rem_1fr] items-center gap-5">
-          <div className="h-28 w-28 [&_svg]:h-28 [&_svg]:w-28 [&_text]:!fill-white">
-            <DonutChart
-              data={[
-                { name: "Passed", value: s.passed },
-                { name: "Failed", value: s.failed },
-                { name: "Skipped", value: s.skipped },
-              ]}
-              category="value"
-              index="name"
-              colors={["emerald", "rose", "slate"]}
-              showAnimation
-              showTooltip={false}
-              variant="donut"
-              label={formatPct(s.passRate)}
-            />
-          </div>
+        <div className="mt-5 grid grid-cols-[auto_1fr] items-center gap-5">
+          <MiniDonut
+            passed={s.passed}
+            failed={s.failed}
+            skipped={s.skipped}
+            label={formatPct(s.passRate)}
+            size={112}
+            thickness={14}
+          />
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">
             <KV label="Total" value={s.total} />

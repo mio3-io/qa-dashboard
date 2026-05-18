@@ -77,6 +77,16 @@ export interface AggregateRun {
   suites: Suite[];
 }
 
+export interface HistoryFeature {
+  name: string;
+  status: Status;
+  tests: number;
+  passed: number;
+  failed: number;
+  skipped: number;
+  duration: number;
+}
+
 export interface HistoryEntry {
   timestamp: string;
   aggregate: RunSummary;
@@ -86,6 +96,7 @@ export interface HistoryEntry {
     summary: RunSummary;
     commit: string;
     branch: string;
+    features?: HistoryFeature[];
   }[];
 }
 

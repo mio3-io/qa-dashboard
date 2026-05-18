@@ -1,17 +1,1487 @@
 [
-  { "timestamp": "2026-05-04T09:00:00.000Z", "aggregate": { "total": 26, "passed": 22, "failed": 2, "skipped": 2, "duration": 540.2, "passRate": 0.846 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 11, "passed": 9, "failed": 1, "skipped": 1, "duration": 170.4, "passRate": 0.818 }, "commit": "a1b2c3d", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 15, "passed": 13, "failed": 1, "skipped": 1, "duration": 369.8, "passRate": 0.866 }, "commit": "8a7b6c5", "branch": "main" } ] },
-  { "timestamp": "2026-05-05T09:00:00.000Z", "aggregate": { "total": 27, "passed": 25, "failed": 0, "skipped": 2, "duration": 521.4, "passRate": 0.925 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 10, "failed": 0, "skipped": 2, "duration": 165.1, "passRate": 0.833 }, "commit": "b2c3d4e", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 15, "passed": 15, "failed": 0, "skipped": 0, "duration": 356.3, "passRate": 1.0 }, "commit": "9b8c7d6", "branch": "main" } ] },
-  { "timestamp": "2026-05-06T09:00:00.000Z", "aggregate": { "total": 27, "passed": 24, "failed": 2, "skipped": 1, "duration": 555.9, "passRate": 0.888 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 11, "failed": 0, "skipped": 1, "duration": 174.7, "passRate": 0.916 }, "commit": "c3d4e5f", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 15, "passed": 13, "failed": 2, "skipped": 0, "duration": 381.2, "passRate": 0.866 }, "commit": "ac9d8e7", "branch": "main" } ] },
-  { "timestamp": "2026-05-07T09:00:00.000Z", "aggregate": { "total": 28, "passed": 24, "failed": 2, "skipped": 2, "duration": 590.1, "passRate": 0.857 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 10, "failed": 1, "skipped": 1, "duration": 188.3, "passRate": 0.833 }, "commit": "d4e5f6a", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 14, "failed": 1, "skipped": 1, "duration": 401.8, "passRate": 0.875 }, "commit": "bd0e9f8", "branch": "main" } ] },
-  { "timestamp": "2026-05-08T09:00:00.000Z", "aggregate": { "total": 28, "passed": 26, "failed": 1, "skipped": 1, "duration": 553.4, "passRate": 0.928 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 11, "failed": 0, "skipped": 1, "duration": 169.8, "passRate": 0.916 }, "commit": "e5f6a7b", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 15, "failed": 1, "skipped": 0, "duration": 383.6, "passRate": 0.937 }, "commit": "ce1f0a9", "branch": "main" } ] },
-  { "timestamp": "2026-05-09T09:00:00.000Z", "aggregate": { "total": 28, "passed": 23, "failed": 4, "skipped": 1, "duration": 612.7, "passRate": 0.821 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 9, "failed": 2, "skipped": 1, "duration": 195.4, "passRate": 0.75 }, "commit": "f6a7b8c", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 14, "failed": 2, "skipped": 0, "duration": 417.3, "passRate": 0.875 }, "commit": "df201ba", "branch": "main" } ] },
-  { "timestamp": "2026-05-10T09:00:00.000Z", "aggregate": { "total": 28, "passed": 26, "failed": 1, "skipped": 1, "duration": 562.8, "passRate": 0.928 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 11, "failed": 0, "skipped": 1, "duration": 178.6, "passRate": 0.916 }, "commit": "a7b8c9d", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 15, "failed": 1, "skipped": 0, "duration": 384.2, "passRate": 0.937 }, "commit": "e032acb", "branch": "main" } ] },
-  { "timestamp": "2026-05-11T09:00:00.000Z", "aggregate": { "total": 28, "passed": 28, "failed": 0, "skipped": 0, "duration": 528.3, "passRate": 1.0 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 12, "failed": 0, "skipped": 0, "duration": 162.2, "passRate": 1.0 }, "commit": "b8c9d0e", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 16, "failed": 0, "skipped": 0, "duration": 366.1, "passRate": 1.0 }, "commit": "f143bdc", "branch": "main" } ] },
-  { "timestamp": "2026-05-12T09:00:00.000Z", "aggregate": { "total": 28, "passed": 26, "failed": 2, "skipped": 0, "duration": 588.0, "passRate": 0.928 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 11, "failed": 1, "skipped": 0, "duration": 181.4, "passRate": 0.916 }, "commit": "c9d0e1f", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 15, "failed": 1, "skipped": 0, "duration": 406.6, "passRate": 0.937 }, "commit": "0254ced", "branch": "main" } ] },
-  { "timestamp": "2026-05-13T09:00:00.000Z", "aggregate": { "total": 28, "passed": 25, "failed": 2, "skipped": 1, "duration": 605.4, "passRate": 0.892 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 10, "failed": 1, "skipped": 1, "duration": 190.7, "passRate": 0.833 }, "commit": "d0e1f2a", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 15, "failed": 1, "skipped": 0, "duration": 414.7, "passRate": 0.937 }, "commit": "1365dfe", "branch": "main" } ] },
-  { "timestamp": "2026-05-14T09:00:00.000Z", "aggregate": { "total": 28, "passed": 28, "failed": 0, "skipped": 0, "duration": 519.0, "passRate": 1.0 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 12, "failed": 0, "skipped": 0, "duration": 158.0, "passRate": 1.0 }, "commit": "e1f2a3b", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 16, "failed": 0, "skipped": 0, "duration": 361.0, "passRate": 1.0 }, "commit": "2476e0f", "branch": "main" } ] },
-  { "timestamp": "2026-05-15T09:00:00.000Z", "aggregate": { "total": 28, "passed": 27, "failed": 0, "skipped": 1, "duration": 555.2, "passRate": 0.964 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 11, "failed": 0, "skipped": 1, "duration": 172.5, "passRate": 0.916 }, "commit": "f2a3b4c", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 16, "failed": 0, "skipped": 0, "duration": 382.7, "passRate": 1.0 }, "commit": "3587f10", "branch": "main" } ] },
-  { "timestamp": "2026-05-16T09:00:00.000Z", "aggregate": { "total": 28, "passed": 24, "failed": 3, "skipped": 1, "duration": 622.6, "passRate": 0.857 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 10, "failed": 2, "skipped": 0, "duration": 199.2, "passRate": 0.833 }, "commit": "a3b4c5d", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 14, "failed": 1, "skipped": 1, "duration": 423.4, "passRate": 0.875 }, "commit": "4698021", "branch": "main" } ] },
-  { "timestamp": "2026-05-17T09:00:00.000Z", "aggregate": { "total": 28, "passed": 26, "failed": 2, "skipped": 0, "duration": 590.8, "passRate": 0.928 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 11, "failed": 1, "skipped": 0, "duration": 183.8, "passRate": 0.916 }, "commit": "b4c5d6e", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 15, "failed": 1, "skipped": 0, "duration": 407.0, "passRate": 0.937 }, "commit": "57a9132", "branch": "main" } ] },
-  { "timestamp": "2026-05-18T09:00:00.000Z", "aggregate": { "total": 28, "passed": 24, "failed": 3, "skipped": 1, "duration": 597.2, "passRate": 0.857 }, "suites": [ { "id": "mobile", "name": "Mobile · Appium", "summary": { "total": 12, "passed": 9, "failed": 2, "skipped": 1, "duration": 184.5, "passRate": 0.75 }, "commit": "c5d6e7f", "branch": "main" }, { "id": "api", "name": "API · Sumsub", "summary": { "total": 16, "passed": 15, "failed": 1, "skipped": 0, "duration": 412.7, "passRate": 0.937 }, "commit": "9f8e7d6", "branch": "main" } ] }
+  {
+    "timestamp": "2026-05-04T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 26,
+      "failed": 2,
+      "skipped": 0,
+      "duration": 524.55,
+      "passRate": 0.9286
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 11,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 154.45,
+          "passRate": 0.9167
+        },
+        "commit": "a3b1799",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 55.19
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "failed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 58.33
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 40.93
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 15,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 370.1,
+          "passRate": 0.9375
+        },
+        "commit": "1c80317",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 107.74
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 124.7
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 137.66
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-05T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 23,
+      "failed": 2,
+      "skipped": 3,
+      "duration": 601.25,
+      "passRate": 0.8214
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 10,
+          "failed": 1,
+          "skipped": 1,
+          "duration": 190.91,
+          "passRate": 0.8333
+        },
+        "commit": "1a9e71f",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 59.38
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 59.28
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 72.25
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 13,
+          "failed": 1,
+          "skipped": 2,
+          "duration": 410.34,
+          "passRate": 0.8125
+        },
+        "commit": "c241330",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "failed",
+            "tests": 8,
+            "passed": 7,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 144.97
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 126.32
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 139.06
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-06T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 25,
+      "failed": 2,
+      "skipped": 1,
+      "duration": 528.38,
+      "passRate": 0.8929
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 11,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 152.72,
+          "passRate": 0.9167
+        },
+        "commit": "dc98d2c",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 48.79
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 49.6
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 54.33
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 1,
+          "skipped": 1,
+          "duration": 375.66,
+          "passRate": 0.875
+        },
+        "commit": "5c941cf",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 118.09
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 141.53
+          },
+          {
+            "name": "Token Generation",
+            "status": "failed",
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 116.04
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-07T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 24,
+      "failed": 3,
+      "skipped": 1,
+      "duration": 514.41,
+      "passRate": 0.8571
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 10,
+          "failed": 1,
+          "skipped": 1,
+          "duration": 162.64,
+          "passRate": 0.8333
+        },
+        "commit": "baa80dd",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 55.68
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 59.95
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "failed",
+            "tests": 4,
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 47.01
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 351.77,
+          "passRate": 0.875
+        },
+        "commit": "3eabedc",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 103.94
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 3,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 135.22
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 112.62
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-08T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 27,
+      "failed": 1,
+      "skipped": 0,
+      "duration": 574.47,
+      "passRate": 0.9643
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0,
+          "duration": 195.0,
+          "passRate": 1.0
+        },
+        "commit": "ea1fca6",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 59.06
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 66.82
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 69.12
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 15,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 379.47,
+          "passRate": 0.9375
+        },
+        "commit": "a491f0b",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 109.92
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 145.47
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 124.09
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-09T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 24,
+      "failed": 4,
+      "skipped": 0,
+      "duration": 581.61,
+      "passRate": 0.8571
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 10,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 192.54,
+          "passRate": 0.8333
+        },
+        "commit": "ff01cf9",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 67.31
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 63.09
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 62.14
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 389.07,
+          "passRate": 0.875
+        },
+        "commit": "77d21e0",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 141.36
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 3,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 108.32
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 139.39
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-10T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 23,
+      "failed": 4,
+      "skipped": 1,
+      "duration": 572.05,
+      "passRate": 0.8214
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 9,
+          "failed": 2,
+          "skipped": 1,
+          "duration": 168.85,
+          "passRate": 0.75
+        },
+        "commit": "deda4e1",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 57.37
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 55.84
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "failed",
+            "tests": 4,
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 55.64
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 403.2,
+          "passRate": 0.875
+        },
+        "commit": "a013ac6",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 136.71
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 3,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 132.16
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 134.32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-11T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 25,
+      "failed": 2,
+      "skipped": 1,
+      "duration": 560.83,
+      "passRate": 0.8929
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 11,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 147.17,
+          "passRate": 0.9167
+        },
+        "commit": "f26b477",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 56.79
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "failed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 43.78
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 46.59
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 1,
+          "skipped": 1,
+          "duration": 413.66,
+          "passRate": 0.875
+        },
+        "commit": "14296c0",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 142.13
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 123.2
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 148.32
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-12T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 25,
+      "failed": 3,
+      "skipped": 0,
+      "duration": 584.49,
+      "passRate": 0.8929
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 11,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 168.83,
+          "passRate": 0.9167
+        },
+        "commit": "702753a",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 54.83
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "failed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 52.3
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 61.7
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 415.66,
+          "passRate": 0.875
+        },
+        "commit": "e64d1bc",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "failed",
+            "tests": 8,
+            "passed": 6,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 140.43
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 131.07
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 144.16
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-13T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 25,
+      "failed": 3,
+      "skipped": 0,
+      "duration": 583.41,
+      "passRate": 0.8929
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 11,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 184.46,
+          "passRate": 0.9167
+        },
+        "commit": "922fe15",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 65.0
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 56.28
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 63.18
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 398.95,
+          "passRate": 0.875
+        },
+        "commit": "93829b4",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "failed",
+            "tests": 8,
+            "passed": 6,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 113.0
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 154.1
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 131.86
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-14T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 22,
+      "failed": 4,
+      "skipped": 2,
+      "duration": 595.31,
+      "passRate": 0.7857
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 8,
+          "failed": 2,
+          "skipped": 2,
+          "duration": 171.13,
+          "passRate": 0.6667
+        },
+        "commit": "6c006f6",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 53.4
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "failed",
+            "tests": 6,
+            "passed": 4,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 55.74
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 61.99
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 424.18,
+          "passRate": 0.875
+        },
+        "commit": "2ef9127",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "failed",
+            "tests": 8,
+            "passed": 6,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 162.38
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 126.19
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 135.61
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-15T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 23,
+      "failed": 4,
+      "skipped": 1,
+      "duration": 521.31,
+      "passRate": 0.8214
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 10,
+          "failed": 1,
+          "skipped": 1,
+          "duration": 165.55,
+          "passRate": 0.8333
+        },
+        "commit": "fc3d334",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 53.44
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 65.2
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 46.91
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 13,
+          "failed": 3,
+          "skipped": 0,
+          "duration": 355.76,
+          "passRate": 0.8125
+        },
+        "commit": "63f2ae2",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "failed",
+            "tests": 8,
+            "passed": 6,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 128.52
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 102.51
+          },
+          {
+            "name": "Token Generation",
+            "status": "failed",
+            "tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 124.72
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-16T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 23,
+      "failed": 5,
+      "skipped": 0,
+      "duration": 523.07,
+      "passRate": 0.8214
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 10,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 160.94,
+          "passRate": 0.8333
+        },
+        "commit": "da4bd9c",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 43.79
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 56.31
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 60.84
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 13,
+          "failed": 3,
+          "skipped": 0,
+          "duration": 362.13,
+          "passRate": 0.8125
+        },
+        "commit": "87f7e1f",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "failed",
+            "tests": 8,
+            "passed": 7,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 129.12
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 124.36
+          },
+          {
+            "name": "Token Generation",
+            "status": "failed",
+            "tests": 3,
+            "passed": 1,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 108.65
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-17T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 24,
+      "failed": 2,
+      "skipped": 2,
+      "duration": 569.35,
+      "passRate": 0.8571
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 2,
+          "duration": 159.1,
+          "passRate": 0.8333
+        },
+        "commit": "b758588",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "passed",
+            "tests": 2,
+            "passed": 2,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 49.66
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 44.75
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "passed",
+            "tests": 4,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 64.69
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 14,
+          "failed": 2,
+          "skipped": 0,
+          "duration": 410.25,
+          "passRate": 0.875
+        },
+        "commit": "506e5a9",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 139.18
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "failed",
+            "tests": 5,
+            "passed": 3,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 136.62
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 134.46
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-18T09:00:00+00:00",
+    "aggregate": {
+      "total": 28,
+      "passed": 24,
+      "failed": 3,
+      "skipped": 1,
+      "duration": 552.45,
+      "passRate": 0.8571
+    },
+    "suites": [
+      {
+        "id": "mobile",
+        "name": "Mobile \u00b7 Appium",
+        "summary": {
+          "total": 12,
+          "passed": 8,
+          "failed": 3,
+          "skipped": 1,
+          "duration": 190.03,
+          "passRate": 0.6667
+        },
+        "commit": "b41b314",
+        "branch": "main",
+        "features": [
+          {
+            "name": "Onboarding - Login Flow",
+            "status": "failed",
+            "tests": 2,
+            "passed": 0,
+            "failed": 2,
+            "skipped": 0,
+            "duration": 63.9
+          },
+          {
+            "name": "Stocks - Buy Flow",
+            "status": "passed",
+            "tests": 6,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 1,
+            "duration": 55.36
+          },
+          {
+            "name": "Profile - Personal Info",
+            "status": "failed",
+            "tests": 4,
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "duration": 70.76
+          }
+        ]
+      },
+      {
+        "id": "api",
+        "name": "API \u00b7 Sumsub",
+        "summary": {
+          "total": 16,
+          "passed": 16,
+          "failed": 0,
+          "skipped": 0,
+          "duration": 362.42,
+          "passRate": 1.0
+        },
+        "commit": "4d71c36",
+        "branch": "main",
+        "features": [
+          {
+            "name": "User Service - SignUp KYC/KYB Flow",
+            "status": "passed",
+            "tests": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 122.81
+          },
+          {
+            "name": "Payment Order Flow",
+            "status": "passed",
+            "tests": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 130.71
+          },
+          {
+            "name": "Token Generation",
+            "status": "passed",
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "duration": 108.9
+          }
+        ]
+      }
+    ]
+  }
 ]

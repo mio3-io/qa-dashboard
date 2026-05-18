@@ -94,6 +94,24 @@ def main() -> int:
                     "summary": s.get("summary", _empty_summary()),
                     "commit": s.get("commitShort", ""),
                     "branch": s.get("branch", ""),
+                    "features": [
+                        {
+                            "name": f["name"],
+                            "status": (
+                                "failed"
+                                if f.get("failed", 0) > 0
+                                else "skipped"
+                                if f.get("skipped", 0) > 0 and f.get("passed", 0) == 0
+                                else "passed"
+                            ),
+                            "tests": f.get("tests", 0),
+                            "passed": f.get("passed", 0),
+                            "failed": f.get("failed", 0),
+                            "skipped": f.get("skipped", 0),
+                            "duration": f.get("duration", 0.0),
+                        }
+                        for f in s.get("features", [])
+                    ],
                 }
                 for s in runs["suites"]
             ],

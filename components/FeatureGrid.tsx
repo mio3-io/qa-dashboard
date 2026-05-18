@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DonutChart } from "@tremor/react";
+import { MiniDonut } from "@/components/MiniDonut";
 import { cn } from "@/lib/utils";
 import { formatDuration, formatPct } from "@/lib/data";
 import type { Feature } from "@/lib/types";
@@ -58,23 +58,15 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
           <ArrowUpRight className="h-4 w-4 text-slate-500 group-hover:text-white transition-colors" />
         </div>
 
-        <div className="mt-4 grid grid-cols-[6rem_1fr] items-center gap-4">
-          <div className="h-24 w-24 [&_svg]:h-24 [&_svg]:w-24 [&_text]:!fill-white">
-            <DonutChart
-              data={[
-                { name: "Passed", value: feature.passed },
-                { name: "Failed", value: feature.failed },
-                { name: "Skipped", value: feature.skipped },
-              ]}
-              category="value"
-              index="name"
-              colors={["emerald", "rose", "slate"]}
-              showAnimation
-              showTooltip={false}
-              variant="donut"
-              label={formatPct(passRate)}
-            />
-          </div>
+        <div className="mt-4 grid grid-cols-[auto_1fr] items-center gap-4">
+          <MiniDonut
+            passed={feature.passed}
+            failed={feature.failed}
+            skipped={feature.skipped}
+            label={formatPct(passRate)}
+            size={88}
+            thickness={11}
+          />
 
           <div className="space-y-1.5 text-xs">
             <Row icon={CheckCircle2} color="text-brand-emerald" label="Passed" value={feature.passed} />
