@@ -1,0 +1,576 @@
+{
+  "generatedAt": "2026-05-18T17:40:25.922523+00:00",
+  "aggregate": {
+    "total": 28,
+    "passed": 24,
+    "failed": 3,
+    "skipped": 1,
+    "duration": 597.2,
+    "passRate": 0.8571
+  },
+  "suites": [
+    {
+      "id": "mobile",
+      "name": "Mobile \u00b7 Appium",
+      "repo": "mio3-io/tohkn-testing-suite",
+      "runId": "1015",
+      "commit": "c5d6e7f1234567890abcdef1234567890abcdef0",
+      "commitShort": "c5d6e7f",
+      "branch": "main",
+      "runUrl": "https://github.com/mio3-io/tohkn-testing-suite/actions/runs/1015",
+      "timestamp": "2026-05-18T09:00:00.000Z",
+      "summary": {
+        "total": 12,
+        "passed": 9,
+        "failed": 2,
+        "skipped": 1,
+        "duration": 184.5,
+        "passRate": 0.75
+      },
+      "features": [
+        {
+          "name": "Onboarding - Login Flow",
+          "slug": "onboarding_login_flow",
+          "tests": 2,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 1,
+          "duration": 6.12,
+          "tags": [
+            "@smoke",
+            "@login",
+            "@happy_path",
+            "@negative",
+            "@figma:home"
+          ],
+          "scenarios": [
+            {
+              "name": "User logs in with valid credentials",
+              "status": "passed",
+              "duration": 6.115,
+              "tags": [
+                "@happy_path",
+                "@figma:home"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "User tries to log in with an invalid email format",
+              "status": "skipped",
+              "duration": 0,
+              "tags": [
+                "@negative"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "Stocks - Buy Flow",
+          "slug": "stocks_buy_flow",
+          "tests": 6,
+          "passed": 5,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 142.3,
+          "tags": [
+            "@stocks",
+            "@buy",
+            "@smoke",
+            "@regression"
+          ],
+          "scenarios": [
+            {
+              "name": "User can search a stock by ticker",
+              "status": "passed",
+              "duration": 8.2,
+              "tags": [
+                "@stocks",
+                "@smoke"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "User can preview a buy order",
+              "status": "passed",
+              "duration": 12.7,
+              "tags": [
+                "@stocks",
+                "@buy"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "User can submit a buy order",
+              "status": "failed",
+              "duration": 24.1,
+              "tags": [
+                "@stocks",
+                "@buy",
+                "@regression"
+              ],
+              "failureMessage": "AssertionError: Expected order confirmation, got error toast: 'Insufficient funds'",
+              "screenshot": null
+            },
+            {
+              "name": "User can cancel a pending order",
+              "status": "passed",
+              "duration": 18.4,
+              "tags": [
+                "@stocks",
+                "@buy"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Buy order shows correct fees",
+              "status": "passed",
+              "duration": 9.9,
+              "tags": [
+                "@stocks"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Buy disclaimer must be accepted",
+              "status": "passed",
+              "duration": 6.6,
+              "tags": [
+                "@stocks",
+                "@regression"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "Profile - Personal Info",
+          "slug": "profile_personal_info",
+          "tests": 4,
+          "passed": 3,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 36.1,
+          "tags": [
+            "@profile",
+            "@smoke",
+            "@regression"
+          ],
+          "scenarios": [
+            {
+              "name": "User can view personal info",
+              "status": "passed",
+              "duration": 4.1,
+              "tags": [
+                "@profile",
+                "@smoke"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "User can navigate to security section",
+              "status": "passed",
+              "duration": 7.8,
+              "tags": [
+                "@profile"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "User can edit personal info",
+              "status": "failed",
+              "duration": 16.2,
+              "tags": [
+                "@profile",
+                "@regression"
+              ],
+              "failureMessage": "TimeoutException: Element 'save_button' not interactable after 15s",
+              "screenshot": null
+            },
+            {
+              "name": "User can log out from profile menu",
+              "status": "passed",
+              "duration": 8.0,
+              "tags": [
+                "@profile",
+                "@smoke"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            }
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "tag": "@buy",
+          "passed": 3,
+          "failed": 1,
+          "skipped": 0
+        },
+        {
+          "tag": "@figma:home",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@happy_path",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@login",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 1
+        },
+        {
+          "tag": "@negative",
+          "passed": 0,
+          "failed": 0,
+          "skipped": 1
+        },
+        {
+          "tag": "@profile",
+          "passed": 3,
+          "failed": 1,
+          "skipped": 0
+        },
+        {
+          "tag": "@regression",
+          "passed": 2,
+          "failed": 2,
+          "skipped": 0
+        },
+        {
+          "tag": "@smoke",
+          "passed": 4,
+          "failed": 0,
+          "skipped": 1
+        },
+        {
+          "tag": "@stocks",
+          "passed": 5,
+          "failed": 1,
+          "skipped": 0
+        }
+      ],
+      "screenshots": []
+    },
+    {
+      "id": "api",
+      "name": "API \u00b7 Sumsub",
+      "repo": "mio3-io/api-automation",
+      "runId": "5042",
+      "commit": "9f8e7d6c5b4a3210fedcba9876543210fedcba98",
+      "commitShort": "9f8e7d6",
+      "branch": "main",
+      "runUrl": "https://github.com/mio3-io/api-automation/actions/runs/5042",
+      "timestamp": "2026-05-18T08:30:00.000Z",
+      "summary": {
+        "total": 16,
+        "passed": 15,
+        "failed": 1,
+        "skipped": 0,
+        "duration": 412.7,
+        "passRate": 0.9375
+      },
+      "features": [
+        {
+          "name": "User Service - SignUp KYC/KYB Flow",
+          "slug": "user_service_signup",
+          "tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "skipped": 0,
+          "duration": 268.4,
+          "tags": [
+            "@signup_full",
+            "@kyc",
+            "@sumsub",
+            "@smoke"
+          ],
+          "scenarios": [
+            {
+              "name": "User signs up with email and SMS OTP",
+              "status": "passed",
+              "duration": 31.2,
+              "tags": [
+                "@signup_full",
+                "@smoke"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Personal info is captured correctly",
+              "status": "passed",
+              "duration": 12.7,
+              "tags": [
+                "@signup_full"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Sumsub WebSDK loads in headless browser",
+              "status": "passed",
+              "duration": 18.3,
+              "tags": [
+                "@sumsub"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "DUI front photo is injected via getUserMedia override",
+              "status": "passed",
+              "duration": 42.1,
+              "tags": [
+                "@sumsub",
+                "@kyc"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "DUI back photo is injected via getUserMedia override",
+              "status": "passed",
+              "duration": 39.5,
+              "tags": [
+                "@sumsub",
+                "@kyc"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Selfie photo is injected",
+              "status": "passed",
+              "duration": 27.8,
+              "tags": [
+                "@sumsub",
+                "@kyc"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Liveness y4m video plays in fake camera stream",
+              "status": "passed",
+              "duration": 61.4,
+              "tags": [
+                "@sumsub",
+                "@kyc"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Applicant is created in MongoDB",
+              "status": "passed",
+              "duration": 35.4,
+              "tags": [
+                "@signup_full",
+                "@db"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "Payment Order Flow",
+          "slug": "payment_order_flow",
+          "tests": 5,
+          "passed": 4,
+          "failed": 1,
+          "skipped": 0,
+          "duration": 98.6,
+          "tags": [
+            "@payment",
+            "@regression",
+            "@order"
+          ],
+          "scenarios": [
+            {
+              "name": "Create a deposit order",
+              "status": "passed",
+              "duration": 14.2,
+              "tags": [
+                "@payment",
+                "@order"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Order status transitions to PENDING",
+              "status": "passed",
+              "duration": 12.9,
+              "tags": [
+                "@payment",
+                "@order"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Order webhook delivers status update",
+              "status": "failed",
+              "duration": 30.0,
+              "tags": [
+                "@payment",
+                "@regression"
+              ],
+              "failureMessage": "AssertionError: Expected webhook payload status='COMPLETED', got 'FAILED'. Body: { 'reason': 'gateway_timeout' }",
+              "screenshot": null
+            },
+            {
+              "name": "Cancel a pending order",
+              "status": "passed",
+              "duration": 22.1,
+              "tags": [
+                "@payment",
+                "@order"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Insufficient balance returns 402",
+              "status": "passed",
+              "duration": 19.4,
+              "tags": [
+                "@payment"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "Token Generation",
+          "slug": "token_generation",
+          "tests": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0,
+          "duration": 45.7,
+          "tags": [
+            "@auth",
+            "@token",
+            "@smoke"
+          ],
+          "scenarios": [
+            {
+              "name": "Generate token with valid credentials",
+              "status": "passed",
+              "duration": 14.8,
+              "tags": [
+                "@auth",
+                "@smoke"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Token is rejected with bad signature",
+              "status": "passed",
+              "duration": 16.2,
+              "tags": [
+                "@auth"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            },
+            {
+              "name": "Token refresh returns a new JWT",
+              "status": "passed",
+              "duration": 14.7,
+              "tags": [
+                "@token"
+              ],
+              "failureMessage": null,
+              "screenshot": null
+            }
+          ]
+        }
+      ],
+      "tags": [
+        {
+          "tag": "@auth",
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@db",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@kyc",
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@order",
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@payment",
+          "passed": 3,
+          "failed": 1,
+          "skipped": 0
+        },
+        {
+          "tag": "@regression",
+          "passed": 0,
+          "failed": 1,
+          "skipped": 0
+        },
+        {
+          "tag": "@signup_full",
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@smoke",
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@sumsub",
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        {
+          "tag": "@token",
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        }
+      ],
+      "screenshots": []
+    }
+  ]
+}

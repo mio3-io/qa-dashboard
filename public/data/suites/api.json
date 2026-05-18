@@ -1,0 +1,86 @@
+{
+  "id": "api",
+  "name": "API · Sumsub",
+  "repo": "mio3-io/api-automation",
+  "runId": "5042",
+  "commit": "9f8e7d6c5b4a3210fedcba9876543210fedcba98",
+  "commitShort": "9f8e7d6",
+  "branch": "main",
+  "runUrl": "https://github.com/mio3-io/api-automation/actions/runs/5042",
+  "timestamp": "2026-05-18T08:30:00.000Z",
+  "summary": {
+    "total": 16,
+    "passed": 15,
+    "failed": 1,
+    "skipped": 0,
+    "duration": 412.7,
+    "passRate": 0.9375
+  },
+  "features": [
+    {
+      "name": "User Service - SignUp KYC/KYB Flow",
+      "slug": "user_service_signup",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "duration": 268.4,
+      "tags": ["@signup_full", "@kyc", "@sumsub", "@smoke"],
+      "scenarios": [
+        { "name": "User signs up with email and SMS OTP", "status": "passed", "duration": 31.2, "tags": ["@signup_full", "@smoke"], "failureMessage": null, "screenshot": null },
+        { "name": "Personal info is captured correctly", "status": "passed", "duration": 12.7, "tags": ["@signup_full"], "failureMessage": null, "screenshot": null },
+        { "name": "Sumsub WebSDK loads in headless browser", "status": "passed", "duration": 18.3, "tags": ["@sumsub"], "failureMessage": null, "screenshot": null },
+        { "name": "DUI front photo is injected via getUserMedia override", "status": "passed", "duration": 42.1, "tags": ["@sumsub", "@kyc"], "failureMessage": null, "screenshot": null },
+        { "name": "DUI back photo is injected via getUserMedia override", "status": "passed", "duration": 39.5, "tags": ["@sumsub", "@kyc"], "failureMessage": null, "screenshot": null },
+        { "name": "Selfie photo is injected", "status": "passed", "duration": 27.8, "tags": ["@sumsub", "@kyc"], "failureMessage": null, "screenshot": null },
+        { "name": "Liveness y4m video plays in fake camera stream", "status": "passed", "duration": 61.4, "tags": ["@sumsub", "@kyc"], "failureMessage": null, "screenshot": null },
+        { "name": "Applicant is created in MongoDB", "status": "passed", "duration": 35.4, "tags": ["@signup_full", "@db"], "failureMessage": null, "screenshot": null }
+      ]
+    },
+    {
+      "name": "Payment Order Flow",
+      "slug": "payment_order_flow",
+      "tests": 5,
+      "passed": 4,
+      "failed": 1,
+      "skipped": 0,
+      "duration": 98.6,
+      "tags": ["@payment", "@regression", "@order"],
+      "scenarios": [
+        { "name": "Create a deposit order", "status": "passed", "duration": 14.2, "tags": ["@payment", "@order"], "failureMessage": null, "screenshot": null },
+        { "name": "Order status transitions to PENDING", "status": "passed", "duration": 12.9, "tags": ["@payment", "@order"], "failureMessage": null, "screenshot": null },
+        { "name": "Order webhook delivers status update", "status": "failed", "duration": 30.0, "tags": ["@payment", "@regression"], "failureMessage": "AssertionError: Expected webhook payload status='COMPLETED', got 'FAILED'. Body: { 'reason': 'gateway_timeout' }", "screenshot": null },
+        { "name": "Cancel a pending order", "status": "passed", "duration": 22.1, "tags": ["@payment", "@order"], "failureMessage": null, "screenshot": null },
+        { "name": "Insufficient balance returns 402", "status": "passed", "duration": 19.4, "tags": ["@payment"], "failureMessage": null, "screenshot": null }
+      ]
+    },
+    {
+      "name": "Token Generation",
+      "slug": "token_generation",
+      "tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "duration": 45.7,
+      "tags": ["@auth", "@token", "@smoke"],
+      "scenarios": [
+        { "name": "Generate token with valid credentials", "status": "passed", "duration": 14.8, "tags": ["@auth", "@smoke"], "failureMessage": null, "screenshot": null },
+        { "name": "Token is rejected with bad signature", "status": "passed", "duration": 16.2, "tags": ["@auth"], "failureMessage": null, "screenshot": null },
+        { "name": "Token refresh returns a new JWT", "status": "passed", "duration": 14.7, "tags": ["@token"], "failureMessage": null, "screenshot": null }
+      ]
+    }
+  ],
+  "tags": [
+    { "tag": "@auth", "passed": 2, "failed": 0, "skipped": 0 },
+    { "tag": "@db", "passed": 1, "failed": 0, "skipped": 0 },
+    { "tag": "@kyc", "passed": 4, "failed": 0, "skipped": 0 },
+    { "tag": "@order", "passed": 3, "failed": 0, "skipped": 0 },
+    { "tag": "@payment", "passed": 3, "failed": 1, "skipped": 0 },
+    { "tag": "@regression", "passed": 0, "failed": 1, "skipped": 0 },
+    { "tag": "@signup_full", "passed": 3, "failed": 0, "skipped": 0 },
+    { "tag": "@smoke", "passed": 3, "failed": 0, "skipped": 0 },
+    { "tag": "@sumsub", "passed": 5, "failed": 0, "skipped": 0 },
+    { "tag": "@token", "passed": 1, "failed": 0, "skipped": 0 }
+  ],
+  "screenshots": []
+}

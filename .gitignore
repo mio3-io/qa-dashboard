@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+.env.local
+.env.*.local
+.vercel
+*.log
+.DS_Store
+
+# Runtime-only artifacts (rebuilt by CI from upstream test runs).
+# Keep example data committed so PR previews render.
+public/data/screenshots/

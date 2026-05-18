@@ -1,0 +1,37 @@
+# Declarative list of test suites the dashboard aggregates.
+# Add a new suite by appending an entry — no code changes required.
+#
+# Fields:
+#   id        — short identifier, used in URLs (/suites/<id>) and file paths
+#   name      — display name (shown in tabs and headers)
+#   color     — accent color id; one of violet, emerald, rose, amber, cyan, sky
+#   repo      — GitHub repo (owner/name) where the test workflow lives
+#   workflow  — exact name of the workflow that produces the artifacts
+#   branch    — branch to pull the latest *successful* run from
+#   artifacts:
+#     junit          — artifact name with the Behave JUnit XML
+#     screenshots    — artifact name with PNG screenshots (optional)
+#     allure         — artifact name with Allure raw results (optional)
+
+suites:
+  - id: mobile
+    name: "Mobile · Appium"
+    color: violet
+    repo: mio3-io/tohkn-testing-suite
+    workflow: "Android Appium Tests"
+    branch: main
+    artifacts:
+      junit: junit-reports
+      screenshots: failure-screenshots
+      allure: allure-results
+
+  - id: api
+    name: "API · Sumsub"
+    color: cyan
+    repo: mio3-io/api-automation
+    workflow: "SignUp - KYC/KYB Flow"
+    branch: main
+    artifacts:
+      junit: junit-reports
+      screenshots: failure-screenshots
+      allure: allure-results

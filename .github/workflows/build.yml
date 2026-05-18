@@ -1,0 +1,241 @@
+name: QA Dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily at 09:00 UTC (≈ 03:00 SV / CST). Refreshes trends even if no
+    # source repo has pushed in the last 24h.
+    - cron: "0 9 * * *"
+  # Source repos can poke the dashboard right after their workflow finishes
+  # by calling: gh api repos/<owner>/qa-dashboard/dispatches \
+  #              -f event_type=test-run-finished
+  repository_dispatch:
+    types: [test-run-finished]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: pip install pyyaml
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install Allure CLI
+        run: |
+          curl -sL https://github.com/allure-framework/allure2/releases/download/2.39.0/allure-2.39.0.tgz | tar -xz
+          echo "$PWD/allure-2.39.0/bin" >> $GITHUB_PATH
+
+      # ──────────────────────────────────────────────────────────────
+      # Restore previous history.json from gh-pages so the trend chart
+      # keeps growing across runs.
+      # ──────────────────────────────────────────────────────────────
+      - name: Restore history.json from gh-pages
+        run: |
+          set -e
+          URL="${{ github.server_url }}/${{ github.repository }}/raw/gh-pages/data/history.json"
+          if curl -fsSL "$URL" -o public/data/history.json.remote; then
+            mv public/data/history.json.remote public/data/history.json
+            echo "Restored previous history.json from gh-pages"
+          else
+            echo "No prior history on gh-pages — keeping the committed seed"
+          fi
+
+      # ──────────────────────────────────────────────────────────────
+      # Pull the latest successful artifacts for every suite listed in
+      # sources.yml. Per-suite results land in public/data/suites/<id>.json
+      # — if a download fails the committed example data for that suite
+      # stays in place, so the dashboard never goes blank.
+      # ──────────────────────────────────────────────────────────────
+      - name: Pull artifacts + parse each suite
+        env:
+          GH_TOKEN: ${{ secrets.DASHBOARD_PAT }}
+        run: |
+          python - <<'PY'
+          import json, shutil, subprocess, sys
+          from pathlib import Path
+          import yaml
+
+          sources = yaml.safe_load(open("sources.yml"))["suites"]
+
+          for s in sources:
+              sid = s["id"]
+              repo = s["repo"]
+              workflow = s["workflow"]
+              branch = s.get("branch", "main")
+              arts = s.get("artifacts", {})
+
+              tmp = Path(f"/tmp/{sid}")
+              for sub in ("junit", "screenshots", "allure"):
+                  (tmp / sub).mkdir(parents=True, exist_ok=True)
+
+              meta_proc = subprocess.run(
+                  ["gh", "run", "list",
+                   "--repo", repo,
+                   "--workflow", workflow,
+                   "--branch", branch,
+                   "--status", "success",
+                   "--limit", "1",
+                   "--json", "databaseId,headSha,createdAt,url",
+                   "--jq", ".[0]"],
+                  capture_output=True, text=True,
+              )
+              if meta_proc.returncode != 0 or not meta_proc.stdout.strip():
+                  print(f"[{sid}] no successful run on {branch} — keeping example data")
+                  continue
+              meta = json.loads(meta_proc.stdout)
+              rid = str(meta["databaseId"])
+              sha = meta["headSha"]
+              run_url = meta["url"]
+              print(f"[{sid}] using run {rid} (commit {sha[:7]})")
+
+              def dl(name, dest):
+                  if not name:
+                      return
+                  subprocess.run(
+                      ["gh", "run", "download", rid,
+                       "--repo", repo,
+                       "-n", name,
+                       "-D", str(dest)],
+                      check=False,
+                  )
+
+              dl(arts.get("junit"), tmp / "junit")
+              dl(arts.get("screenshots"), tmp / "screenshots")
+              dl(arts.get("allure"), tmp / "allure")
+
+              # Per-suite namespace for screenshots and allure inputs.
+              shot_dest = Path("public/data/screenshots") / sid
+              shot_dest.mkdir(parents=True, exist_ok=True)
+              for p in (tmp / "screenshots").rglob("*"):
+                  if p.is_file() and p.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp"}:
+                      shutil.copy2(p, shot_dest / p.name)
+
+              allure_dest = Path("allure-input") / sid
+              allure_dest.mkdir(parents=True, exist_ok=True)
+              for p in (tmp / "allure").rglob("*"):
+                  if p.is_file():
+                      shutil.copy2(p, allure_dest / p.name)
+
+              out_json = Path("public/data/suites") / f"{sid}.json"
+              subprocess.run([
+                  "python", "scripts/parse_junit.py",
+                  "--suite-id", sid,
+                  "--suite-name", s["name"],
+                  "--suite-repo", repo,
+                  "--junit-dir", str(tmp / "junit"),
+                  "--screenshots-dir", str(tmp / "screenshots"),
+                  "--screenshots-prefix", f"screenshots/{sid}",
+                  "--run-id", rid,
+                  "--commit", sha,
+                  "--branch", branch,
+                  "--run-url", run_url,
+                  "--out", str(out_json),
+              ], check=True)
+          PY
+
+      # ──────────────────────────────────────────────────────────────
+      # Aggregate everything in public/data/suites/ — whether it came
+      # from this build or is leftover example data — into runs.json,
+      # and append a row to history.json.
+      # ──────────────────────────────────────────────────────────────
+      - name: Aggregate suites
+        run: |
+          set -e
+          shopt -s nullglob
+          SUITES=(public/data/suites/*.json)
+          if [ ${#SUITES[@]} -eq 0 ]; then
+            echo "No suite payloads to aggregate — bailing out."
+            exit 0
+          fi
+          python scripts/aggregate.py \
+            --suites "${SUITES[@]}" \
+            --out public/data/runs.json \
+            --history public/data/history.json
+
+      # ──────────────────────────────────────────────────────────────
+      # One Allure site per suite, mounted at /allure/<id>/.
+      # ──────────────────────────────────────────────────────────────
+      - name: Generate Allure reports
+        run: |
+          set -e
+          mkdir -p public/allure
+          if [ -d allure-input ]; then
+            for dir in allure-input/*/; do
+              sid="$(basename "$dir")"
+              if [ -n "$(ls -A "$dir" 2>/dev/null)" ]; then
+                echo "Generating Allure report for $sid"
+                allure generate "$dir" -o "public/allure/$sid" --clean
+              fi
+            done
+          fi
+
+      - name: Install dashboard deps
+        run: npm ci || npm install
+
+      - name: Build dashboard (static export)
+        env:
+          NEXT_PUBLIC_REPO_NAME: ${{ github.event.repository.name }}
+          NEXT_PUBLIC_REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+        run: npm run build
+
+      - name: Assemble Pages artifact
+        run: |
+          set -e
+          rm -rf dist
+          mkdir -p dist
+          cp -R out/* dist/
+          # Mount one Allure site per suite at /allure/<id>/
+          if [ -d public/allure ]; then
+            mkdir -p dist/allure
+            cp -R public/allure/* dist/allure/
+            # Convenience landing: /allure/ shows the first suite by default
+            FIRST=$(ls dist/allure | head -1)
+            if [ -n "$FIRST" ] && [ ! -f dist/allure/index.html ]; then
+              cat > dist/allure/index.html <<EOF
+          <!doctype html><meta http-equiv="refresh" content="0; url=./$FIRST/">
+          EOF
+            fi
+          fi
+          # Raw JSON also reachable directly (for debugging / external tools)
+          mkdir -p dist/data
+          cp -R public/data/* dist/data/ || true
+          # SPA-style 404 fallback so deep links survive direct visits
+          cp dist/index.html dist/404.html || true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
