@@ -52,7 +52,7 @@ export function TrendChart({ history, title }: TrendChartProps) {
           showAnimation
           curveType="monotone"
           yAxisWidth={36}
-          valueFormatter={(v) => `${v}`}
+          valueFormatter={(v: number) => `${v}`}
         />
       </Card>
     </motion.div>

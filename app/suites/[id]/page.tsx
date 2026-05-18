@@ -32,7 +32,7 @@ export default function SuitePage({ params }: { params: { id: string } }) {
           label="Pass Rate"
           value={formatPct(s.passRate)}
           hint={`${s.passed}/${s.total}`}
-          icon={Activity}
+          icon={<Activity className="h-4 w-4" />}
           tone="violet"
           progress={s.passRate}
           index={0}
@@ -41,7 +41,7 @@ export default function SuitePage({ params }: { params: { id: string } }) {
           label="Passed"
           value={`${s.passed}`}
           hint={s.total > 0 ? formatPct(s.passed / s.total) : "—"}
-          icon={CheckCircle2}
+          icon={<CheckCircle2 className="h-4 w-4" />}
           tone="emerald"
           progress={s.total > 0 ? s.passed / s.total : 0}
           index={1}
@@ -50,7 +50,7 @@ export default function SuitePage({ params }: { params: { id: string } }) {
           label="Failed"
           value={`${s.failed}`}
           hint={s.total > 0 ? formatPct(s.failed / s.total) : "—"}
-          icon={XCircle}
+          icon={<XCircle className="h-4 w-4" />}
           tone="rose"
           progress={s.total > 0 ? s.failed / s.total : 0}
           index={2}
@@ -59,7 +59,7 @@ export default function SuitePage({ params }: { params: { id: string } }) {
           label="Skipped"
           value={`${s.skipped}`}
           hint={s.total > 0 ? formatPct(s.skipped / s.total) : "—"}
-          icon={MinusCircle}
+          icon={<MinusCircle className="h-4 w-4" />}
           tone="amber"
           progress={s.total > 0 ? s.skipped / s.total : 0}
           index={3}
@@ -68,7 +68,7 @@ export default function SuitePage({ params }: { params: { id: string } }) {
           label="Duration"
           value={formatDuration(s.duration)}
           hint="latest run"
-          icon={Timer}
+          icon={<Timer className="h-4 w-4" />}
           tone="cyan"
           index={4}
         />

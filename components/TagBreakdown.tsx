@@ -55,7 +55,7 @@ function Panel({
           data={data}
           color={color}
           className="mt-4"
-          valueFormatter={(v) => `${v}`}
+          valueFormatter={(v: number) => `${v}`}
         />
       )}
     </motion.div>

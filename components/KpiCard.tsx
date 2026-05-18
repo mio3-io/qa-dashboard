@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
-import type { LucideIcon } from "lucide-react";
 
 type Tone = "violet" | "emerald" | "rose" | "amber" | "cyan";
 
@@ -43,7 +42,7 @@ interface KpiCardProps {
   label: string;
   value: string;
   hint?: string;
-  icon?: LucideIcon;
+  icon?: React.ReactNode;
   tone?: Tone;
   progress?: number; // 0-1
   index?: number;
@@ -53,7 +52,7 @@ export function KpiCard({
   label,
   value,
   hint,
-  icon: Icon,
+  icon,
   tone = "violet",
   progress,
   index = 0,
@@ -83,14 +82,14 @@ export function KpiCard({
           <div className="text-[0.65rem] uppercase tracking-[0.18em] text-slate-400">
             {label}
           </div>
-          {Icon && (
+          {icon && (
             <div
               className={cn(
                 "rounded-lg p-1.5 bg-white/[0.04] border border-white/5",
                 s.text,
               )}
             >
-              <Icon className="h-4 w-4" />
+              {icon}
             </div>
           )}
         </div>
