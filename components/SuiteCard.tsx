@@ -80,10 +80,9 @@ export function SuiteCard({ suite, index }: SuiteCardProps) {
           <ArrowUpRight className="h-4 w-4 text-slate-500 group-hover:text-white transition-colors" />
         </div>
 
-        <div className="mt-5 grid grid-cols-[auto_1fr] items-center gap-5">
-          <div className="relative h-24 w-24">
+        <div className="mt-5 grid grid-cols-[7rem_1fr] items-center gap-5">
+          <div className="h-28 w-28 [&_svg]:h-28 [&_svg]:w-28 [&_text]:!fill-white">
             <DonutChart
-              className="absolute inset-0"
               data={[
                 { name: "Passed", value: s.passed },
                 { name: "Failed", value: s.failed },
@@ -93,14 +92,10 @@ export function SuiteCard({ suite, index }: SuiteCardProps) {
               index="name"
               colors={["emerald", "rose", "slate"]}
               showAnimation
-              showLabel={false}
               showTooltip={false}
+              variant="donut"
+              label={formatPct(s.passRate)}
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-mono text-base font-semibold text-white">
-                {formatPct(s.passRate)}
-              </span>
-            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-1.5 text-xs">

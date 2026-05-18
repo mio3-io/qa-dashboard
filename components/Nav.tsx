@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Activity, LayoutGrid, ExternalLink } from "lucide-react";
+import { Activity, History, LayoutGrid, ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Suite } from "@/lib/types";
 
@@ -39,6 +39,10 @@ export function Nav({ suites }: NavProps) {
             <NavLink href="/" active={pathname === "/" && !activeSuite}>
               <Activity className="h-4 w-4" />
               Overview
+            </NavLink>
+            <NavLink href="/runs" active={pathname?.startsWith("/runs") ?? false}>
+              <History className="h-4 w-4" />
+              Runs
             </NavLink>
             {suites.map((s) => (
               <NavLink

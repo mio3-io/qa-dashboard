@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-18T17:40:25.922523+00:00",
+  "generatedAt": "2026-05-18T20:00:40.321549+00:00",
   "aggregate": {
     "total": 28,
     "passed": 24,
@@ -53,7 +53,58 @@
                 "@figma:home"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "the TOHKN app is open",
+                  "status": "passed",
+                  "duration": 0.002,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap on the Get Started button",
+                  "status": "passed",
+                  "duration": 0.298,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I choose to log in with an existing account",
+                  "status": "passed",
+                  "duration": 0.265,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I enter my registered email",
+                  "status": "passed",
+                  "duration": 0.733,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I tap on Continue",
+                  "status": "passed",
+                  "duration": 0.131,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I enter the OTP code",
+                  "status": "passed",
+                  "duration": 4.288,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should be on the Home screen",
+                  "status": "passed",
+                  "duration": 0.399,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User tries to log in with an invalid email format",
@@ -63,7 +114,51 @@
                 "@negative"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "the TOHKN app is open",
+                  "status": "skipped",
+                  "duration": 0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap on the Get Started button",
+                  "status": "skipped",
+                  "duration": 0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I choose to log in with an existing account",
+                  "status": "skipped",
+                  "duration": 0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I enter an invalid email \"not-an-email\"",
+                  "status": "skipped",
+                  "duration": 0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I tap on Continue",
+                  "status": "skipped",
+                  "duration": 0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see a validation error",
+                  "status": "skipped",
+                  "duration": 0,
+                  "screenshot": null
+                }
+              ]
             }
           ]
         },
@@ -91,7 +186,37 @@
                 "@smoke"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am logged in",
+                  "status": "passed",
+                  "duration": 1.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I open the stocks tab",
+                  "status": "passed",
+                  "duration": 1.5,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I search \"AAPL\"",
+                  "status": "passed",
+                  "duration": 2.5,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see the Apple Inc stock card",
+                  "status": "passed",
+                  "duration": 3.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User can preview a buy order",
@@ -102,7 +227,44 @@
                 "@buy"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am viewing a stock",
+                  "status": "passed",
+                  "duration": 1.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Buy",
+                  "status": "passed",
+                  "duration": 2.1,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I enter the quantity",
+                  "status": "passed",
+                  "duration": 3.5,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I tap Preview",
+                  "status": "passed",
+                  "duration": 2.6,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see the order preview",
+                  "status": "passed",
+                  "duration": 3.5,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User can submit a buy order",
@@ -114,7 +276,37 @@
                 "@regression"
               ],
               "failureMessage": "AssertionError: Expected order confirmation, got error toast: 'Insufficient funds'",
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am on the order preview screen",
+                  "status": "passed",
+                  "duration": 0.9,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Confirm",
+                  "status": "passed",
+                  "duration": 4.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I accept the disclaimer",
+                  "status": "passed",
+                  "duration": 2.1,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see the order confirmation",
+                  "status": "failed",
+                  "duration": 17.1,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User can cancel a pending order",
@@ -125,7 +317,37 @@
                 "@buy"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I have a pending order",
+                  "status": "passed",
+                  "duration": 1.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap on the order in my list",
+                  "status": "passed",
+                  "duration": 3.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I tap Cancel order",
+                  "status": "passed",
+                  "duration": 6.8,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the order disappears from my pending list",
+                  "status": "passed",
+                  "duration": 7.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Buy order shows correct fees",
@@ -135,7 +357,23 @@
                 "@stocks"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I have a preview with quantity 10",
+                  "status": "passed",
+                  "duration": 1.6,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the displayed fee should be USD 0.99",
+                  "status": "passed",
+                  "duration": 8.3,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Buy disclaimer must be accepted",
@@ -146,7 +384,30 @@
                 "@regression"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am on the confirm step",
+                  "status": "passed",
+                  "duration": 0.8,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Confirm without accepting the disclaimer",
+                  "status": "passed",
+                  "duration": 2.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see an error message",
+                  "status": "passed",
+                  "duration": 3.4,
+                  "screenshot": null
+                }
+              ]
             }
           ]
         },
@@ -173,7 +434,30 @@
                 "@smoke"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am on the Profile menu",
+                  "status": "passed",
+                  "duration": 0.7,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Personal Info",
+                  "status": "passed",
+                  "duration": 1.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see my full name, email and DUI",
+                  "status": "passed",
+                  "duration": 2.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User can navigate to security section",
@@ -183,7 +467,30 @@
                 "@profile"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am on the Profile menu",
+                  "status": "passed",
+                  "duration": 0.8,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Security",
+                  "status": "passed",
+                  "duration": 3.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should be on the security settings screen",
+                  "status": "passed",
+                  "duration": 4.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User can edit personal info",
@@ -194,7 +501,37 @@
                 "@regression"
               ],
               "failureMessage": "TimeoutException: Element 'save_button' not interactable after 15s",
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am on Personal Info",
+                  "status": "passed",
+                  "duration": 0.6,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Edit",
+                  "status": "passed",
+                  "duration": 2.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I change my phone number",
+                  "status": "passed",
+                  "duration": 6.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I tap Save",
+                  "status": "failed",
+                  "duration": 7.6,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "User can log out from profile menu",
@@ -205,7 +542,30 @@
                 "@smoke"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "I am on the Profile menu",
+                  "status": "passed",
+                  "duration": 0.9,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I tap Log out",
+                  "status": "passed",
+                  "duration": 3.6,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I should see the Welcome screen",
+                  "status": "passed",
+                  "duration": 3.5,
+                  "screenshot": null
+                }
+              ]
             }
           ]
         }
@@ -311,7 +671,51 @@
                 "@smoke"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a fresh mailsac email and a Twilio number",
+                  "status": "passed",
+                  "duration": 1.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I POST /users/signup with email + phone",
+                  "status": "passed",
+                  "duration": 2.6,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I fetch the email OTP from Mailsac",
+                  "status": "passed",
+                  "duration": 8.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I POST /users/verify-email-otp",
+                  "status": "passed",
+                  "duration": 2.6,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "And",
+                  "text": "I fetch the SMS OTP from Twilio",
+                  "status": "passed",
+                  "duration": 12.1,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the user is created with status PENDING_KYC",
+                  "status": "passed",
+                  "duration": 4.3,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Personal info is captured correctly",
@@ -321,7 +725,30 @@
                 "@signup_full"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "an existing applicant",
+                  "status": "passed",
+                  "duration": 1.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I POST /users/profile with first/last name + DOB",
+                  "status": "passed",
+                  "duration": 5.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "MongoDB user document reflects the new fields",
+                  "status": "passed",
+                  "duration": 6.3,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Sumsub WebSDK loads in headless browser",
@@ -331,7 +758,30 @@
                 "@sumsub"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a Sumsub access token for the applicant",
+                  "status": "passed",
+                  "duration": 3.8,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I open the Sumsub WebSDK iframe",
+                  "status": "passed",
+                  "duration": 9.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the SDK reports initial state DOCUMENTS",
+                  "status": "passed",
+                  "duration": 5.1,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "DUI front photo is injected via getUserMedia override",
@@ -342,7 +792,30 @@
                 "@kyc"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "the fake camera is armed with dui_front.jpg",
+                  "status": "passed",
+                  "duration": 4.1,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I trigger the document capture in the SDK",
+                  "status": "passed",
+                  "duration": 16.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "Sumsub accepts the front side",
+                  "status": "passed",
+                  "duration": 22.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "DUI back photo is injected via getUserMedia override",
@@ -353,7 +826,30 @@
                 "@kyc"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "the fake camera is armed with dui_back.jpg",
+                  "status": "passed",
+                  "duration": 4.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I trigger the back-side capture",
+                  "status": "passed",
+                  "duration": 14.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "Sumsub accepts the back side",
+                  "status": "passed",
+                  "duration": 21.3,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Selfie photo is injected",
@@ -364,7 +860,30 @@
                 "@kyc"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "the fake camera is armed with selfie.jpg",
+                  "status": "passed",
+                  "duration": 4.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I trigger the selfie step",
+                  "status": "passed",
+                  "duration": 10.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "Sumsub accepts the selfie",
+                  "status": "passed",
+                  "duration": 13.8,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Liveness y4m video plays in fake camera stream",
@@ -375,7 +894,30 @@
                 "@kyc"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "liveness.y4m is mounted as the camera source",
+                  "status": "passed",
+                  "duration": 5.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "the liveness step runs",
+                  "status": "passed",
+                  "duration": 25.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "Sumsub accepts the liveness sample",
+                  "status": "passed",
+                  "duration": 31.4,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Applicant is created in MongoDB",
@@ -386,7 +928,30 @@
                 "@db"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "the applicant has finished KYC",
+                  "status": "passed",
+                  "duration": 1.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I query the users collection by phone number",
+                  "status": "passed",
+                  "duration": 12.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the document has kyc_status=GREEN",
+                  "status": "passed",
+                  "duration": 22.0,
+                  "screenshot": null
+                }
+              ]
             }
           ]
         },
@@ -413,7 +978,30 @@
                 "@order"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a verified applicant",
+                  "status": "passed",
+                  "duration": 1.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I POST /orders with type=deposit amount=100",
+                  "status": "passed",
+                  "duration": 5.5,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the response includes an order_id",
+                  "status": "passed",
+                  "duration": 7.5,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Order status transitions to PENDING",
@@ -424,7 +1012,30 @@
                 "@order"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a deposit order",
+                  "status": "passed",
+                  "duration": 1.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I poll GET /orders/{id} until status changes",
+                  "status": "passed",
+                  "duration": 4.9,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "status should be PENDING",
+                  "status": "passed",
+                  "duration": 7.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Order webhook delivers status update",
@@ -435,7 +1046,30 @@
                 "@regression"
               ],
               "failureMessage": "AssertionError: Expected webhook payload status='COMPLETED', got 'FAILED'. Body: { 'reason': 'gateway_timeout' }",
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "an order in PENDING state",
+                  "status": "passed",
+                  "duration": 1.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "the gateway sends an async COMPLETED webhook",
+                  "status": "passed",
+                  "duration": 5.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "our /webhooks/payment endpoint receives status COMPLETED",
+                  "status": "failed",
+                  "duration": 23.8,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Cancel a pending order",
@@ -446,7 +1080,30 @@
                 "@order"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a pending order",
+                  "status": "passed",
+                  "duration": 1.1,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I DELETE /orders/{id}",
+                  "status": "passed",
+                  "duration": 8.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the order is CANCELLED",
+                  "status": "passed",
+                  "duration": 13.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Insufficient balance returns 402",
@@ -456,7 +1113,30 @@
                 "@payment"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a user with $0 balance",
+                  "status": "passed",
+                  "duration": 1.3,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I POST /orders amount=999999",
+                  "status": "passed",
+                  "duration": 6.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "the response status is 402 with code INSUFFICIENT_FUNDS",
+                  "status": "passed",
+                  "duration": 12.1,
+                  "screenshot": null
+                }
+              ]
             }
           ]
         },
@@ -483,7 +1163,30 @@
                 "@smoke"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "valid Mailsac credentials",
+                  "status": "passed",
+                  "duration": 0.9,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I run the auth_login flow",
+                  "status": "passed",
+                  "duration": 9.8,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I receive a valid JWT",
+                  "status": "passed",
+                  "duration": 4.1,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Token is rejected with bad signature",
@@ -493,7 +1196,30 @@
                 "@auth"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a JWT signed with a wrong key",
+                  "status": "passed",
+                  "duration": 0.8,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I call a protected endpoint",
+                  "status": "passed",
+                  "duration": 7.4,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I get 401 with code INVALID_TOKEN",
+                  "status": "passed",
+                  "duration": 8.0,
+                  "screenshot": null
+                }
+              ]
             },
             {
               "name": "Token refresh returns a new JWT",
@@ -503,7 +1229,30 @@
                 "@token"
               ],
               "failureMessage": null,
-              "screenshot": null
+              "screenshot": null,
+              "steps": [
+                {
+                  "keyword": "Given",
+                  "text": "a near-expiry token and its refresh token",
+                  "status": "passed",
+                  "duration": 1.0,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "When",
+                  "text": "I POST /auth/refresh",
+                  "status": "passed",
+                  "duration": 6.2,
+                  "screenshot": null
+                },
+                {
+                  "keyword": "Then",
+                  "text": "I receive a new access token with later exp claim",
+                  "status": "passed",
+                  "duration": 7.5,
+                  "screenshot": null
+                }
+              ]
             }
           ]
         }

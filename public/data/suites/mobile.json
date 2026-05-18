@@ -1,6 +1,6 @@
 {
   "id": "mobile",
-  "name": "Mobile · Appium",
+  "name": "Mobile \u00b7 Appium",
   "repo": "mio3-io/tohkn-testing-suite",
   "runId": "1015",
   "commit": "c5d6e7f1234567890abcdef1234567890abcdef0",
@@ -25,23 +25,129 @@
       "failed": 0,
       "skipped": 1,
       "duration": 6.12,
-      "tags": ["@smoke", "@login", "@happy_path", "@negative", "@figma:home"],
+      "tags": [
+        "@smoke",
+        "@login",
+        "@happy_path",
+        "@negative",
+        "@figma:home"
+      ],
       "scenarios": [
         {
           "name": "User logs in with valid credentials",
           "status": "passed",
           "duration": 6.115,
-          "tags": ["@happy_path", "@figma:home"],
+          "tags": [
+            "@happy_path",
+            "@figma:home"
+          ],
           "failureMessage": null,
-          "screenshot": null
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "the TOHKN app is open",
+              "status": "passed",
+              "duration": 0.002,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap on the Get Started button",
+              "status": "passed",
+              "duration": 0.298,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I choose to log in with an existing account",
+              "status": "passed",
+              "duration": 0.265,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I enter my registered email",
+              "status": "passed",
+              "duration": 0.733,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I tap on Continue",
+              "status": "passed",
+              "duration": 0.131,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I enter the OTP code",
+              "status": "passed",
+              "duration": 4.288,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should be on the Home screen",
+              "status": "passed",
+              "duration": 0.399,
+              "screenshot": null
+            }
+          ]
         },
         {
           "name": "User tries to log in with an invalid email format",
           "status": "skipped",
           "duration": 0,
-          "tags": ["@negative"],
+          "tags": [
+            "@negative"
+          ],
           "failureMessage": null,
-          "screenshot": null
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "the TOHKN app is open",
+              "status": "skipped",
+              "duration": 0,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap on the Get Started button",
+              "status": "skipped",
+              "duration": 0,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I choose to log in with an existing account",
+              "status": "skipped",
+              "duration": 0,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I enter an invalid email \"not-an-email\"",
+              "status": "skipped",
+              "duration": 0,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I tap on Continue",
+              "status": "skipped",
+              "duration": 0,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see a validation error",
+              "status": "skipped",
+              "duration": 0,
+              "screenshot": null
+            }
+          ]
         }
       ]
     },
@@ -53,14 +159,245 @@
       "failed": 1,
       "skipped": 0,
       "duration": 142.3,
-      "tags": ["@stocks", "@buy", "@smoke", "@regression"],
+      "tags": [
+        "@stocks",
+        "@buy",
+        "@smoke",
+        "@regression"
+      ],
       "scenarios": [
-        { "name": "User can search a stock by ticker", "status": "passed", "duration": 8.2, "tags": ["@stocks", "@smoke"], "failureMessage": null, "screenshot": null },
-        { "name": "User can preview a buy order", "status": "passed", "duration": 12.7, "tags": ["@stocks", "@buy"], "failureMessage": null, "screenshot": null },
-        { "name": "User can submit a buy order", "status": "failed", "duration": 24.1, "tags": ["@stocks", "@buy", "@regression"], "failureMessage": "AssertionError: Expected order confirmation, got error toast: 'Insufficient funds'", "screenshot": null },
-        { "name": "User can cancel a pending order", "status": "passed", "duration": 18.4, "tags": ["@stocks", "@buy"], "failureMessage": null, "screenshot": null },
-        { "name": "Buy order shows correct fees", "status": "passed", "duration": 9.9, "tags": ["@stocks"], "failureMessage": null, "screenshot": null },
-        { "name": "Buy disclaimer must be accepted", "status": "passed", "duration": 6.6, "tags": ["@stocks", "@regression"], "failureMessage": null, "screenshot": null }
+        {
+          "name": "User can search a stock by ticker",
+          "status": "passed",
+          "duration": 8.2,
+          "tags": [
+            "@stocks",
+            "@smoke"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am logged in",
+              "status": "passed",
+              "duration": 1.2,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I open the stocks tab",
+              "status": "passed",
+              "duration": 1.5,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I search \"AAPL\"",
+              "status": "passed",
+              "duration": 2.5,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see the Apple Inc stock card",
+              "status": "passed",
+              "duration": 3.0,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "User can preview a buy order",
+          "status": "passed",
+          "duration": 12.7,
+          "tags": [
+            "@stocks",
+            "@buy"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am viewing a stock",
+              "status": "passed",
+              "duration": 1.0,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Buy",
+              "status": "passed",
+              "duration": 2.1,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I enter the quantity",
+              "status": "passed",
+              "duration": 3.5,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I tap Preview",
+              "status": "passed",
+              "duration": 2.6,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see the order preview",
+              "status": "passed",
+              "duration": 3.5,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "User can submit a buy order",
+          "status": "failed",
+          "duration": 24.1,
+          "tags": [
+            "@stocks",
+            "@buy",
+            "@regression"
+          ],
+          "failureMessage": "AssertionError: Expected order confirmation, got error toast: 'Insufficient funds'",
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am on the order preview screen",
+              "status": "passed",
+              "duration": 0.9,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Confirm",
+              "status": "passed",
+              "duration": 4.0,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I accept the disclaimer",
+              "status": "passed",
+              "duration": 2.1,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see the order confirmation",
+              "status": "failed",
+              "duration": 17.1,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "User can cancel a pending order",
+          "status": "passed",
+          "duration": 18.4,
+          "tags": [
+            "@stocks",
+            "@buy"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I have a pending order",
+              "status": "passed",
+              "duration": 1.4,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap on the order in my list",
+              "status": "passed",
+              "duration": 3.2,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I tap Cancel order",
+              "status": "passed",
+              "duration": 6.8,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "the order disappears from my pending list",
+              "status": "passed",
+              "duration": 7.0,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "Buy order shows correct fees",
+          "status": "passed",
+          "duration": 9.9,
+          "tags": [
+            "@stocks"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I have a preview with quantity 10",
+              "status": "passed",
+              "duration": 1.6,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "the displayed fee should be USD 0.99",
+              "status": "passed",
+              "duration": 8.3,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "Buy disclaimer must be accepted",
+          "status": "passed",
+          "duration": 6.6,
+          "tags": [
+            "@stocks",
+            "@regression"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am on the confirm step",
+              "status": "passed",
+              "duration": 0.8,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Confirm without accepting the disclaimer",
+              "status": "passed",
+              "duration": 2.4,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see an error message",
+              "status": "passed",
+              "duration": 3.4,
+              "screenshot": null
+            }
+          ]
+        }
       ]
     },
     {
@@ -71,25 +408,212 @@
       "failed": 1,
       "skipped": 0,
       "duration": 36.1,
-      "tags": ["@profile", "@smoke", "@regression"],
+      "tags": [
+        "@profile",
+        "@smoke",
+        "@regression"
+      ],
       "scenarios": [
-        { "name": "User can view personal info", "status": "passed", "duration": 4.1, "tags": ["@profile", "@smoke"], "failureMessage": null, "screenshot": null },
-        { "name": "User can navigate to security section", "status": "passed", "duration": 7.8, "tags": ["@profile"], "failureMessage": null, "screenshot": null },
-        { "name": "User can edit personal info", "status": "failed", "duration": 16.2, "tags": ["@profile", "@regression"], "failureMessage": "TimeoutException: Element 'save_button' not interactable after 15s", "screenshot": null },
-        { "name": "User can log out from profile menu", "status": "passed", "duration": 8.0, "tags": ["@profile", "@smoke"], "failureMessage": null, "screenshot": null }
+        {
+          "name": "User can view personal info",
+          "status": "passed",
+          "duration": 4.1,
+          "tags": [
+            "@profile",
+            "@smoke"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am on the Profile menu",
+              "status": "passed",
+              "duration": 0.7,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Personal Info",
+              "status": "passed",
+              "duration": 1.4,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see my full name, email and DUI",
+              "status": "passed",
+              "duration": 2.0,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "User can navigate to security section",
+          "status": "passed",
+          "duration": 7.8,
+          "tags": [
+            "@profile"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am on the Profile menu",
+              "status": "passed",
+              "duration": 0.8,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Security",
+              "status": "passed",
+              "duration": 3.0,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should be on the security settings screen",
+              "status": "passed",
+              "duration": 4.0,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "User can edit personal info",
+          "status": "failed",
+          "duration": 16.2,
+          "tags": [
+            "@profile",
+            "@regression"
+          ],
+          "failureMessage": "TimeoutException: Element 'save_button' not interactable after 15s",
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am on Personal Info",
+              "status": "passed",
+              "duration": 0.6,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Edit",
+              "status": "passed",
+              "duration": 2.0,
+              "screenshot": null
+            },
+            {
+              "keyword": "And",
+              "text": "I change my phone number",
+              "status": "passed",
+              "duration": 6.0,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I tap Save",
+              "status": "failed",
+              "duration": 7.6,
+              "screenshot": null
+            }
+          ]
+        },
+        {
+          "name": "User can log out from profile menu",
+          "status": "passed",
+          "duration": 8.0,
+          "tags": [
+            "@profile",
+            "@smoke"
+          ],
+          "failureMessage": null,
+          "screenshot": null,
+          "steps": [
+            {
+              "keyword": "Given",
+              "text": "I am on the Profile menu",
+              "status": "passed",
+              "duration": 0.9,
+              "screenshot": null
+            },
+            {
+              "keyword": "When",
+              "text": "I tap Log out",
+              "status": "passed",
+              "duration": 3.6,
+              "screenshot": null
+            },
+            {
+              "keyword": "Then",
+              "text": "I should see the Welcome screen",
+              "status": "passed",
+              "duration": 3.5,
+              "screenshot": null
+            }
+          ]
+        }
       ]
     }
   ],
   "tags": [
-    { "tag": "@buy", "passed": 3, "failed": 1, "skipped": 0 },
-    { "tag": "@figma:home", "passed": 1, "failed": 0, "skipped": 0 },
-    { "tag": "@happy_path", "passed": 1, "failed": 0, "skipped": 0 },
-    { "tag": "@login", "passed": 1, "failed": 0, "skipped": 1 },
-    { "tag": "@negative", "passed": 0, "failed": 0, "skipped": 1 },
-    { "tag": "@profile", "passed": 3, "failed": 1, "skipped": 0 },
-    { "tag": "@regression", "passed": 2, "failed": 2, "skipped": 0 },
-    { "tag": "@smoke", "passed": 4, "failed": 0, "skipped": 1 },
-    { "tag": "@stocks", "passed": 5, "failed": 1, "skipped": 0 }
+    {
+      "tag": "@buy",
+      "passed": 3,
+      "failed": 1,
+      "skipped": 0
+    },
+    {
+      "tag": "@figma:home",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "tag": "@happy_path",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0
+    },
+    {
+      "tag": "@login",
+      "passed": 1,
+      "failed": 0,
+      "skipped": 1
+    },
+    {
+      "tag": "@negative",
+      "passed": 0,
+      "failed": 0,
+      "skipped": 1
+    },
+    {
+      "tag": "@profile",
+      "passed": 3,
+      "failed": 1,
+      "skipped": 0
+    },
+    {
+      "tag": "@regression",
+      "passed": 2,
+      "failed": 2,
+      "skipped": 0
+    },
+    {
+      "tag": "@smoke",
+      "passed": 4,
+      "failed": 0,
+      "skipped": 1
+    },
+    {
+      "tag": "@stocks",
+      "passed": 5,
+      "failed": 1,
+      "skipped": 0
+    }
   ],
   "screenshots": []
 }

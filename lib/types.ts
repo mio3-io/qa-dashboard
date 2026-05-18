@@ -1,4 +1,12 @@
-export type Status = "passed" | "failed" | "skipped";
+export type Status = "passed" | "failed" | "skipped" | "undefined";
+
+export interface Step {
+  keyword: string;        // "Given" | "When" | "Then" | "And" | "But"
+  text: string;
+  status: Status;
+  duration: number;
+  screenshot: string | null;
+}
 
 export type Color = "violet" | "emerald" | "rose" | "amber" | "cyan" | "sky";
 
@@ -9,6 +17,7 @@ export interface Scenario {
   tags: string[];
   failureMessage: string | null;
   screenshot: string | null;
+  steps: Step[];
 }
 
 export interface Feature {

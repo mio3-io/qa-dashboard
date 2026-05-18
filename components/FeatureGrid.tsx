@@ -58,10 +58,9 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
           <ArrowUpRight className="h-4 w-4 text-slate-500 group-hover:text-white transition-colors" />
         </div>
 
-        <div className="mt-4 grid grid-cols-[auto_1fr] items-center gap-4">
-          <div className="relative h-20 w-20">
+        <div className="mt-4 grid grid-cols-[6rem_1fr] items-center gap-4">
+          <div className="h-24 w-24 [&_svg]:h-24 [&_svg]:w-24 [&_text]:!fill-white">
             <DonutChart
-              className="absolute inset-0"
               data={[
                 { name: "Passed", value: feature.passed },
                 { name: "Failed", value: feature.failed },
@@ -71,14 +70,10 @@ function FeatureCard({ feature, index }: { feature: Feature; index: number }) {
               index="name"
               colors={["emerald", "rose", "slate"]}
               showAnimation
-              showLabel={false}
               showTooltip={false}
+              variant="donut"
+              label={formatPct(passRate)}
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-mono text-sm font-semibold text-white">
-                {formatPct(passRate)}
-              </span>
-            </div>
           </div>
 
           <div className="space-y-1.5 text-xs">

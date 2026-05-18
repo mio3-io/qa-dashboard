@@ -31,6 +31,46 @@ from pathlib import Path
 
 TAG_RE = re.compile(r"@[\w:_-]+")
 
+# Behave pretty formatter prints one step per line:
+#   "    Given the TOHKN app is open ... passed in 0.002s"
+# Status can be: passed | failed | skipped | undefined | untested
+STEP_RE = re.compile(
+    r"^\s{2,}(Given|When|Then|And|But|\*)\s+(.+?)\s+\.{3}\s+"
+    r"(passed|failed|skipped|undefined|untested)"
+    r"(?:\s+in\s+([\d.]+)s)?\s*$"
+)
+
+
+def _extract_steps(system_out_text: str) -> list[dict]:
+    """Pull the per-step rows out of the Behave pretty-formatter dump."""
+    if not system_out_text:
+        return []
+    in_scenario = False
+    steps: list[dict] = []
+    for line in system_out_text.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("Scenario:") or stripped.startswith("Scenario Outline:"):
+            in_scenario = True
+            continue
+        if not in_scenario:
+            continue
+        m = STEP_RE.match(line)
+        if not m:
+            continue
+        keyword, text, status, duration = m.groups()
+        # "untested" only happens after a failure earlier in the scenario.
+        status = "skipped" if status == "untested" else status
+        steps.append(
+            {
+                "keyword": keyword,
+                "text": text,
+                "status": status,
+                "duration": float(duration or 0),
+                "screenshot": None,
+            }
+        )
+    return steps
+
 
 def _extract_tags(system_out_text: str) -> list[str]:
     if not system_out_text:
@@ -122,6 +162,7 @@ def parse_junit(
                 "tags": tags,
                 "failureMessage": _failure_message(tc),
                 "screenshot": None,
+                "steps": _extract_steps(sys_out_text),
             }
 
             if status == "failed":
