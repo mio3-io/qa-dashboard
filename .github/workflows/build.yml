@@ -203,14 +203,17 @@ jobs:
       - name: Assemble Pages artifact
         run: |
           set -e
+          shopt -s nullglob dotglob
           rm -rf dist
           mkdir -p dist
-          cp -R out/* dist/
-          # Mount one Allure site per suite at /allure/<id>/
-          if [ -d public/allure ]; then
+          # Use dir/. so it works even when out/ has just been created and
+          # has no entries yet (cp -R src/* errors on empty src).
+          cp -R out/. dist/
+          # Mount one Allure site per suite at /allure/<id>/, only when
+          # there's something to mount.
+          if [ -d public/allure ] && [ -n "$(ls -A public/allure 2>/dev/null)" ]; then
             mkdir -p dist/allure
-            cp -R public/allure/* dist/allure/
-            # Convenience landing: /allure/ shows the first suite by default
+            cp -R public/allure/. dist/allure/
             FIRST=$(ls dist/allure | head -1)
             if [ -n "$FIRST" ] && [ ! -f dist/allure/index.html ]; then
               cat > dist/allure/index.html <<EOF
@@ -218,11 +221,13 @@ jobs:
           EOF
             fi
           fi
-          # Raw JSON also reachable directly (for debugging / external tools)
-          mkdir -p dist/data
-          cp -R public/data/* dist/data/ || true
-          # SPA-style 404 fallback so deep links survive direct visits
-          cp dist/index.html dist/404.html || true
+          # Raw JSON also reachable directly (for debugging / external tools).
+          if [ -d public/data ] && [ -n "$(ls -A public/data 2>/dev/null)" ]; then
+            mkdir -p dist/data
+            cp -R public/data/. dist/data/
+          fi
+          # SPA-style 404 fallback so deep links survive direct visits.
+          [ -f dist/index.html ] && cp dist/index.html dist/404.html || true
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
